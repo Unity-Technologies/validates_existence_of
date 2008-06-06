@@ -1,0 +1,249 @@
+# Logfile created on Fri Jun 06 15:53:48 +0300 2008 by /
+  [4;36;1mSQL (0.000426)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000286)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.250062)[0m   [0;1mCREATE TABLE "box" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000378)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.020468)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000428)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.030066)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.019696)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000462)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.016488)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.001402)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000769)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.006628)[0m   [0;1mDROP TABLE "box"[0m
+  [4;35;1mSQL (0.002927)[0m   [0mCREATE TABLE "box" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000404)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.002623)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.002886)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000363)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000441)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000816)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007675)[0m   [0;1mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000522)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002462)[0m   [0;1mDROP TABLE "items"[0m
+  [4;35;1mSQL (0.002643)[0m   [0mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000687)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000351)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mBox Create (0.000292)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:54:29', '2008-06-06 12:54:29')[0m
+  [4;35;1mBox Load (0.000363)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 1) [0m
+  [4;36;1mBox Load (0.000361)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000903)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007327)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.002530)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000459)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.003512)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.002689)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000490)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mBox Create (0.000293)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:55:17', '2008-06-06 12:55:17')[0m
+  [4;36;1mBox Load (0.000247)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;35;1mBox Load (0.000131)[0m   [0mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;36;1mBox Create (0.000280)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:55:17', '2008-06-06 12:55:17')[0m
+  [4;35;1mBox Load (0.000371)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;36;1mBox Load (0.000283)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.000843)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.001875)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005125)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.002442)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000541)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.002520)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.002500)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000458)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mBox Create (0.000320)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:56:01', '2008-06-06 12:56:01')[0m
+  [4;36;1mBox Load (0.000248)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;35;1mBox Load (0.000147)[0m   [0mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;36;1mBox Create (0.000260)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:56:01', '2008-06-06 12:56:01')[0m
+  [4;35;1mBox Load (0.000420)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;36;1mBox Load (0.000326)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;35;1mBox Create (0.000232)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:56:01', '2008-06-06 12:56:01')[0m
+  [4;36;1mBox Load (0.000155)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000474)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.001135)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007543)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.003016)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000756)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.003010)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.003172)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000577)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mBox Create (0.000408)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:57:55', '2008-06-06 12:57:55')[0m
+  [4;36;1mBox Load (0.000196)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;35;1mBox Load (0.000158)[0m   [0mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;36;1mBox Create (0.000328)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:57:55', '2008-06-06 12:57:55')[0m
+  [4;35;1mBox Load (0.000384)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;36;1mBox Load (0.000283)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;35;1mBox Create (0.000213)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:57:55', '2008-06-06 12:57:55')[0m
+  [4;36;1mBox Load (0.000181)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mBox Create (0.000694)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:57:55', '2008-06-06 12:57:55')[0m
+  [4;36;1mBox Load (0.000262)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000436)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000869)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.017921)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.002869)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000448)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.003313)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.003199)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000485)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000565)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.002260)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.023633)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.065800)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000540)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.044982)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.087235)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000514)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mMyModule::Box Create (0.000292)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:59:27', '2008-06-06 12:59:27')[0m
+  [4;36;1mMyModule::Box Load (0.000199)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;35;1mMyModule::Box Load (0.000131)[0m   [0mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;36;1mMyModule::Box Create (0.000232)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:59:27', '2008-06-06 12:59:27')[0m
+  [4;35;1mMyModule::Box Load (0.000418)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;36;1mMyModule::Box Load (0.000325)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000263)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:59:27', '2008-06-06 12:59:27')[0m
+  [4;36;1mMyModule::Box Load (0.000221)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000270)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:59:27', '2008-06-06 12:59:27')[0m
+  [4;36;1mMyModule::Box Create (0.000448)[0m   [0;1mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 12:59:27', '2008-06-06 12:59:27')[0m
+  [4;35;1mMyModule::Box Load (0.000352)[0m   [0mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000403)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000941)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.009920)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.002664)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000445)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.003343)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.002837)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000481)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mMyModule::Box Load (0.000178)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;36;1mMyModule::Box Load (0.000128)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000272)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 13:00:42', '2008-06-06 13:00:42')[0m
+  [4;36;1mMyModule::Box Load (0.000335)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 1) [0m
+  [4;35;1mMyModule::Box Load (0.000310)[0m   [0mSELECT * FROM "boxes" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.000193)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000243)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 13:00:42', '2008-06-06 13:00:42')[0m
+  [4;36;1mMyModule::Box Load (0.000369)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;35;1mMyModule::Box Load (0.000358)[0m   [0mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.000151)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000515)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.001033)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.006283)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (0.002691)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.000619)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.002966)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (0.003499)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000543)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mMyModule::Box Load (0.000266)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;36;1mMyModule::Box Load (0.000188)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000435)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 13:01:22', '2008-06-06 13:01:22')[0m
+  [4;36;1mMyModule::Box Load (0.000442)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 1) [0m
+  [4;35;1mMyModule::Box Load (0.000383)[0m   [0mSELECT * FROM "boxes" WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.000230)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mMyModule::Box Load (0.000229)[0m   [0mSELECT * FROM "boxes" WHERE ("boxes"."id" = 13) [0m
+  [4;36;1mMyModule::Box Load (0.000173)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mMyModule::Box Create (0.000313)[0m   [0mINSERT INTO "boxes" ("updated_at", "created_at") VALUES('2008-06-06 13:01:22', '2008-06-06 13:01:22')[0m
+  [4;36;1mMyModule::Box Load (0.000430)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
+  [4;35;1mMyModule::Box Load (0.000396)[0m   [0mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.000330)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
