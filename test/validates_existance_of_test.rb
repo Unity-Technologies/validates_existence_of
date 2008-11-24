@@ -7,13 +7,13 @@ module MyModule
 
   class Item < ActiveRecord::Base
     belongs_to  :box
-    validates_existance_of  :box
+    validates_existence_of  :box
   end
 end
 
 include MyModule
 
-class ValidatesExistanceOfTest < Test::Unit::TestCase
+class ValidatesExistenceOfTest < Test::Unit::TestCase
   def setup
   end
 

@@ -247,3 +247,117 @@
   [4;36;1mMyModule::Box Load (0.000430)[0m   [0;1mSELECT * FROM "boxes" WHERE ("boxes"."id" = 2) [0m
   [4;35;1mMyModule::Box Load (0.000396)[0m   [0mSELECT * FROM "boxes" WHERE (id = 2) LIMIT 1[0m
   [4;36;1mMyModule::Box Load (0.000330)[0m   [0;1mSELECT * FROM "boxes" WHERE (id = NULL) LIMIT 1[0m
+  [4;36;1mSQL (13.7ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mDROP TABLE "boxes"[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE TABLE "boxes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE "items"[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "box_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE `boxes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `box_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('1')[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mMyModule::Item Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mDROP TABLE `boxes`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE `boxes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mDROP TABLE `items`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `box_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mMyModule::Item Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mMyModule::Box Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `boxes`[0m
+  [4;35;1mMyModule::Box Load (0.5ms)[0m   [0mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 13) [0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMyModule::Box Create (0.3ms)[0m   [0;1mINSERT INTO `boxes` (`updated_at`, `created_at`) VALUES('2008-11-24 15:11:06', '2008-11-24 15:11:06')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mMyModule::Box Load (0.4ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 1) [0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.4ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 13) [0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMyModule::Box Create (0.4ms)[0m   [0;1mINSERT INTO `boxes` (`updated_at`, `created_at`) VALUES('2008-11-24 15:11:06', '2008-11-24 15:11:06')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 2) [0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (id = 2) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mDROP TABLE `boxes`[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE `boxes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE `items`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `box_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mMyModule::Item Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mMyModule::Box Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `boxes`[0m
+  [4;35;1mMyModule::Box Load (0.4ms)[0m   [0mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 13) [0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMyModule::Box Create (0.4ms)[0m   [0;1mINSERT INTO `boxes` (`updated_at`, `created_at`) VALUES('2008-11-24 15:20:31', '2008-11-24 15:20:31')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mMyModule::Box Load (0.4ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 1) [0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (id = 1) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = NULL) LIMIT 1[0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 13) [0m
+  [4;36;1mMyModule::Box Load (0.2ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = 13) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMyModule::Box Create (0.3ms)[0m   [0;1mINSERT INTO `boxes` (`updated_at`, `created_at`) VALUES('2008-11-24 15:20:31', '2008-11-24 15:20:31')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (`boxes`.`id` = 2) [0m
+  [4;35;1mMyModule::Box Load (0.3ms)[0m   [0mSELECT * FROM `boxes` WHERE (id = 2) LIMIT 1[0m
+  [4;36;1mMyModule::Box Load (0.3ms)[0m   [0;1mSELECT * FROM `boxes` WHERE (id = NULL) LIMIT 1[0m
